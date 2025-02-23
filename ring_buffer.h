@@ -12,7 +12,7 @@ typedef struct {
   uint32_t buffer[RING_BUFFER_SIZE];
   uint32_t *head;
   uint32_t *tail;
-  size_t count; // Anzahl gespeicherter Elemente
+  size_t count;
 } Ring_buffer;
 
 void Ring_buffer_reset(Ring_buffer *buf);
