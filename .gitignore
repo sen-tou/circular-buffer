@@ -35,9 +35,6 @@
 *.stackdump
 *.core
 
-# VSCode settings
-.vscode/
-
 # CLion settings
 .idea/
 
