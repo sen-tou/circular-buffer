@@ -3,20 +3,26 @@
     "tasks": [
         {
             "label": "CMake Configure",
-            "type": "shell",
+            "type": "process",
             "command": "cmake",
-            "args": ["-S", ".", "-B", "build", "-DCMAKE_BUILD_TYPE=Debug"],
-            "problemMatcher": [],
-            "group": "build"
+            "args": ["-B", "build", "-DCMAKE_BUILD_TYPE=Debug"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
         },
         {
-            "label": "CMake Build",
-            "type": "shell",
+            "label": "Build Project",
+            "type": "process",
             "command": "cmake",
             "args": ["--build", "build"],
-            "problemMatcher": ["$gcc"],
-            "group": "build",
-            "dependsOn": ["CMake Configure"]
+            "dependsOn": ["CMake Configure"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
         }
     ]
 }

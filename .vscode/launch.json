@@ -2,25 +2,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch CMake Build",
-            "type": "cppdbg",
+            "name": "Run Executable",
+            "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/circular",
+            "program": "${workspaceFolder}/build/ring_buffer",
             "args": [],
-            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "CMake Build",
-            "miDebuggerPath": "/usr/bin/gdb" // Adjust for your OS if needed
+            "console": "integratedTerminal",
+            "stopOnEntry": false,
+            "preLaunchTask": "Build Project"
         }
     ]
 }

@@ -8,9 +8,14 @@ There are also refered to as circular queues, cyclic buffers or ring buffers.
 
 I based my reading mostly on this [blog post](https://www.baeldung.com/cs/circular-buffer).
 
-# Implementation
+## Implementation
 
 - A pointer where the next empty element is and where elements will be inserted
 in is called the **head**
 - A pointer to the **oldest** data in the buffer is the **tail**
-- If the head and tail point to the same location the buffer is full
+- A counter **count** that counts the elements up until the limit
+- Once the count reaches the limit the head needs to weap arounf and then
+it can either:
+  - Stop inserting
+  - Ovewriting the latest data, from this point the tail needs to move as well
+  so that it points to the oldest data as described above

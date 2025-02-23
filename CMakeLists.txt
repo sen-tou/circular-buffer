@@ -12,4 +12,4 @@ endif()
 # Set compiler flags
 set(CMAKE_C_FLAGS_DEBUG "-g")
 
-add_executable(circular main.c circular.c)
+add_executable(ring_buffer main.c ring_buffer.c)
